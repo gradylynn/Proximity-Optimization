@@ -52,8 +52,8 @@ def computeProximity(xy_dims, featureList, scale=20):
             deque.append(pushSecond)
             return
         
+    q = deque()
     for feature in featureList:
-        q = deque()
         if isInChip(feature): q.append(feature)
         else: q.append(nearestPointInChip(feature))
         
